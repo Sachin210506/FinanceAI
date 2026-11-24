@@ -1,0 +1,22 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated vector database and frontend build/dependencies
+backend/chroma_db/
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+
+# Local/editor/OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
