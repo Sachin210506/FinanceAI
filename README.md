@@ -1,4 +1,5 @@
 # FinanceAI
+# FinanceAI
 
 FinanceAI turns a project idea into a finance focused requirements draft and SDLC recommendation.
 
