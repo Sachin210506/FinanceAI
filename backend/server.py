@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 import agents
-from rag import HybridRAG
+from rag import HybridRAG 
 
 app = FastAPI(title="FinanceAI — 2-Agent Hybrid RAG", version="1.0.0")
 
@@ -56,7 +56,12 @@ async def analyze(req: AnalyzeRequest):
             raise RuntimeError("Agent 1 returned an empty requirements specification.")
 
         # 3. Hybrid RAG retrieval for Agent 2 (SDLC selection criteria + governance)
-        sdlc_evidence = rag.search("SDLC selection criteria verification regulatory risk security lifecycle", top_k=2)
+        sdlc_query = (
+            "SDLC model selection criteria: stable requirements, formal verification, changing scope, "
+            "risk analysis, planned increments, tight delivery, user feedback, prototypes. "
+            f"Project brief: {brief}"
+        )
+        sdlc_evidence = rag.search(sdlc_query, top_k=2)
 
         # 4. Agent 2: Select & justify SDLC from the 7 models
         print(f"[FinanceAI] 3/3 Agent 2 evaluating 7 SDLC models...", flush=True)

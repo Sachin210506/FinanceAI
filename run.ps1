@@ -15,7 +15,7 @@ if (Test-Path $ollamaExe) {
 
 Write-Host "[2/2] Starting FinanceAI at http://127.0.0.1:8002 ..." -ForegroundColor Green
 $backend = Join-Path $PSScriptRoot "backend"
-$venv = Join-Path $backend ".venv"
+$venv = Join-Path $backend ".venv" 
 $python = Join-Path $venv "Scripts\python.exe"
 
 if (-not (Test-Path $python)) {

@@ -153,13 +153,6 @@ export function App() {
               evidence, structures IEEE-style requirements, and selects the best lifecycle from 7 SDLC models.
             </p>
           </div>
-          <div className="intro-note">
-            <span className="note-icon">i</span>
-            <span>
-              Outputs use synthetic data only. Regulatory, security, and compliance sign-offs remain with authorised
-              humans.
-            </span>
-          </div>
         </section>
 
         <section className="workspace-grid">
@@ -341,7 +334,7 @@ export function App() {
           </section>
         )}
 
-        <footer>FinanceAI · Local Requirements Engineering Workspace · Synthetic Data Only</footer>
+        <footer>FinanceAI · Local Requirements Engineering Workspace</footer>
       </main>
     </div>
   );
